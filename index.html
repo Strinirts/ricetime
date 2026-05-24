@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rice Time</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body{
+      background:#fff8f0;
+      color:#333;
+    }
+
+    header{
+      background:#ff6b35;
+      color:white;
+      padding:20px 50px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position:sticky;
+      top:0;
+      z-index:1000;
+    }
+
+    .logo{
+      font-size:28px;
+      font-weight:bold;
+    }
+
+    nav a{
+      color:white;
+      text-decoration:none;
+      margin-left:25px;
+      font-size:18px;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      color:#ffe0d2;
+    }
+
+    .hero{
+      height:90vh;
+      background:url('./veggies.jpg') center/cover no-repeat;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      color:white;
+      padding:20px;
+    }
+
+    .hero-content{
+      background:rgba(0,0,0,0.6);
+      padding:40px;
+      border-radius:12px;
+    }
+
+    .hero h1{
+      font-size:60px;
+      margin-bottom:20px;
+    }
+
+    .hero p{
+      font-size:22px;
+      margin-bottom:25px;
+    }
+
+    .btn{
+      background:#ff6b35;
+      border:none;
+      padding:15px 30px;
+      color:white;
+      font-size:18px;
+      cursor:pointer;
+      border-radius:8px;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      background:#e85a2a;
+    }
+
+    .menu-section{
+      padding:80px 50px;
+      text-align:center;
+    }
+
+    .menu-section h2{
+      font-size:40px;
+      margin-bottom:50px;
+      color:#ff6b35;
+    }
+
+    .menu-container{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:30px;
+    }
+
+    .menu-card{
+      background:white;
+      border-radius:12px;
+      overflow:hidden;
+      box-shadow:0 5px 15px rgba(0,0,0,0.1);
+      transition:0.3s;
+    }
+
+    .menu-card:hover{
+      transform:translateY(-10px);
+    }
+
+    .menu-card img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+    }
+
+    .menu-content{
+      padding:20px;
+    }
+
+    .menu-content h3{
+      margin-bottom:10px;
+    }
+
+    .price{
+      color:#ff6b35;
+      font-size:22px;
+      font-weight:bold;
+      margin-top:10px;
+    }
+
+    .about{
+      padding:80px 50px;
+      background:#fff;
+      text-align:center;
+    }
+
+    .about h2{
+      color:#ff6b35;
+      margin-bottom:20px;
+      font-size:40px;
+    }
+
+    .about p{
+      max-width:800px;
+      margin:auto;
+      line-height:1.8;
+      font-size:18px;
+    }
+
+    .contact{
+      padding:80px 50px;
+      text-align:center;
+    }
+
+    .contact h2{
+      font-size:40px;
+      color:#ff6b35;
+      margin-bottom:30px;
+    }
+
+    form{
+      max-width:600px;
+      margin:auto;
+    }
+
+    input, textarea{
+      width:100%;
+      padding:15px;
+      margin-bottom:20px;
+      border:1px solid #ccc;
+      border-radius:8px;
+      font-size:16px;
+    }
+
+    footer{
+      background:#222;
+      color:white;
+      text-align:center;
+      padding:20px;
+    }
+
+    @media(max-width:768px){
+      header{
+        flex-direction:column;
+      }
+
+      nav{
+        margin-top:15px;
+      }
+
+      .hero h1{
+        font-size:40px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">Rice Time</div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#menu">Menu</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Delicious Food Delivered</h1>
+      <p>Fresh • Tasty • Fast Delivery</p>
+      <!-- <button class="btn" onclick="showMessage()">Order Now</button> -->
+    </div>
+  </section>
+
+  <!-- Menu -->
+  <section class="menu-section" id="menu">
+    <h2>Our Popular Dishes</h2>
+
+    <div class="menu-container">
+
+      <div class="menu-card">
+        <!-- <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&q=80" alt=""> -->
+        <img src="./rice.jpg" alt="">
+        <div class="menu-content">
+          <h3>White Rice</h3>
+          <p>Making with quality Ponni rice</p>
+          <!-- <div class="price">$12</div> -->
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <!-- <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80" alt=""> -->
+         <img src="./sambar.jpg" alt="">
+        <div class="menu-content">
+          <h3>Sambar</h3>
+          <p>Flavours of dhal and veggies</p>
+          <!-- <div class="price">$10</div> -->
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <!-- <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80" alt=""> -->
+         <img src="./rasam.jpg" alt="">
+        <div class="menu-content">
+          <h3>Tomato Rasam</h3>
+          <p>Good thing for digestion</p>
+          <!-- <div class="price">$8</div> -->
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <!-- <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80" alt=""> -->
+         <img src="./salad.jpg" alt="">
+        <div class="menu-content">
+          <h3>Salad</h3>
+          <p>Fresh vegetables with delicious dressing.</p>
+          <!-- <div class="price">$8</div> -->
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <!-- <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80" alt=""> -->
+         <img src="./pickle.jpg" alt="">
+        <div class="menu-content">
+          <h3>Pickle</h3>
+          <p>Gives you a sour bite</p>
+          <!-- <div class="price">$8</div> -->
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about" id="about">
+    <h2>About Us</h2>
+    <p>
+      Rice Time brings you delicious meals made with fresh ingredients and delivered fast to your doorstep.
+      We believe in quality food, excellent service, and customer satisfaction.
+    </p>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+
+    <!-- <form id="contactForm">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Message"></textarea>
+
+      <button class="btn" type="submit">Send Message</button>
+    </form> -->
+
+    <a class="btn" href="mailto:arunblen866@gmail.com" style="text-decoration:none">Send Message</a>
+
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p> 2026 Rice Time | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    function showMessage(){
+      alert("Welcome to Foodie Express! Start your order now.");
+    }
+
+   /* document.getElementById("contactForm").addEventListener("submit", function(e){
+      e.preventDefault();
+      alert("Thank you! Your message has been sent.");
+    });*/
+  </script>
+
+</body>
+</html>
